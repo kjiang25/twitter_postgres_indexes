@@ -74,8 +74,8 @@ but you won't have to wait days to create each index and see if it works correct
     The easiest way to "reset" our containers is to do it from within docker.
     The following commands will login to the docker containers and delete all of postgres's data:
     ```
-    $ docker-compose exec pg_normalized_batch bash -c 'rm -rf $PGDATA'
-    $ docker-compose exec pg_denormalized bash -c 'rm -rf $PGDATA'
+    $ docker-compose run pg_normalized_batch bash -c 'rm -rf $PGDATA'
+    $ docker-compose run pg_denormalized bash -c 'rm -rf $PGDATA'
     ```
     After running these commands, if you bring the containers down and back up, postgres will detect that the volumes are empty and re-run the `schema.sql` scripts to populate the databases.
 
