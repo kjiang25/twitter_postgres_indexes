@@ -1,0 +1,15 @@
+nohup: ignoring input
+time="2025-05-07T15:25:20-07:00" level=warning msg="/home/Kevin.Jiang.25b/twitter_postgres_indexes/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+SET
+SET
+      reloptions       
+-----------------------
+ {parallel_workers=64}
+(1 row)
+
+psql:/tmp/db/services/pg_denormalized/schema-indexes.sql:14: FATAL:  terminating connection due to administrator command
+CONTEXT:  while inserting index tuple (0,36) in relation "pg_class_relname_nsp_index"
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+psql:/tmp/db/services/pg_denormalized/schema-indexes.sql:14: fatal: connection to server was lost
